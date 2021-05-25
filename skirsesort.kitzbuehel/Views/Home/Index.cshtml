@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<script>
+    function loadFile() {
+        var dataForm = new FormData(document.getElementById("form_loadfile"));
+        //$.ajax({
+        //    type: 'POST',
+        //    url: "Home/CalculateRoutes",
+        //    dataType: 'json',
+        //    data: dataForm,
+        //    cache: false,
+        //    contentType: false,
+        //    processData: false,
+        //    success: function (response) {
+
+        //    }
+        //})
+    }
+</script>
+
+<div class="row" style="height:10px">&nbsp;</div>
+<form id="form_loadfile" name="form_loadfile" action="Home/CalculateRoutes" method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-2">
+            <h4>Select file:</h4>
+        </div>
+        <div class="col-md-4">
+            <input type="file" id="file" name="file" style="height:initial;" class="form-control" accept=".txt" />
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary">Load file</button>
+        </div>
+    </div>
+</form>
