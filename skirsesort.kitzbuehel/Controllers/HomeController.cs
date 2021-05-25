@@ -307,7 +307,7 @@ namespace skirsesort.kitzbuehel.Controllers
             }
 
 
-            return Json(new { Route = r });
+            return Json(new { Route = res });
         }
     }
 }
